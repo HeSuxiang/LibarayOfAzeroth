@@ -2,6 +2,7 @@ package com.cuisanzhang.libarayofazeroth;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -85,7 +86,7 @@ public class MainHistoryActivity1 extends Activity {
             }
 
             @Override
-            public View getView(int position, View convertView, ViewGroup parent) {
+            public View getView(final int position, View convertView, ViewGroup parent) {
                 // TODO Auto-generated method stub
                 final int pos = position;
 
@@ -110,6 +111,14 @@ public class MainHistoryActivity1 extends Activity {
 
 
                 holder.textView.setText(Historys[position]);
+                holder.textView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(MainHistoryActivity1.this, WebViewActivity.class);
+                        intent.putExtra(WebViewActivity.EXTRA_URI, "html/1/1/" + (position + 1) + ".html");
+                        startActivity(intent);
+                    }
+                });
 
 //                holder.name.setText(block.getMaterial());
 

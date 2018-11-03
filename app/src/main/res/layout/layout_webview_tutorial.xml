@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    //标题栏
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:background="?attr/colorPrimary">-->
+        <!--<ImageView-->
+            <!--android:id="@+id/imageViewToolbar_menu"-->
+            <!--android:layout_width="55dp"-->
+            <!--android:layout_height="35dp"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:paddingTop="2dp"-->
+            <!--android:paddingBottom="2dp"-->
+            <!--android:src="?attr/navigationIcon_back"-->
+            <!--android:scaleType="centerInside"/>-->
+        <!--<TextView-->
+            <!--android:id="@+id/title"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:gravity="center"-->
+            <!--android:text="@string/toolbar_title"-->
+            <!--android:textSize="14sp"-->
+            <!--android:textColor="?attr/textColorPrimary"/>-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/imageViewRefresh_menu"-->
+            <!--android:layout_width="45dp"-->
+            <!--android:layout_height="35dp"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:paddingTop="2dp"-->
+            <!--android:paddingBottom="2dp"-->
+            <!--android:scaleType="centerInside"/>-->
+            <!--&lt;!&ndash;android:src="?attr/navigationIcon_refresh"&ndash;&gt;-->
+
+    <!--</LinearLayout>-->
+    <!--<android.support.v7.widget.Toolbar-->
+        <!--android:id="@+id/webView_toolbar"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:background="?attr/colorPrimary"-->
+        <!--android:minHeight="?attr/actionBarSize"-->
+        <!--app:popupTheme="@style/OverflowMenuStyle">-->
+
+        <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:gravity="center"-->
+            <!--android:text="@string/feedback"-->
+            <!--android:textSize="24sp"-->
+            <!--android:textColor="@color/textColorPrimary_white"/>-->
+    <!--</android.support.v7.widget.Toolbar>-->
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+    </WebView>
+
+
+    <!--<com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"-->
+        <!--android:id="@+id/adView"-->
+        <!--android:layout_below="@id/webView"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:layout_marginBottom="10dp"-->
+        <!--ads:adSize="BANNER"-->
+        <!--ads:adUnitId="@string/ad_banner_id"></com.google.android.gms.ads.AdView>-->
+
+
+</LinearLayout>

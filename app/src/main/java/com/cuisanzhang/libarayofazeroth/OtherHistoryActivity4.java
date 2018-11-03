@@ -17,7 +17,7 @@ public class OtherHistoryActivity4 extends Activity {
 
     private String[] Historys = {
             "01  地狱寻踪犬使用指南",
-            "02  水晶塔使用手册 “安戈洛环形山水晶手机与使用手册”",
+            "02  水晶塔使用手册   “安戈洛环形山水晶手机与使用手册”",
             "03  地鼠训练手册",
     };
 

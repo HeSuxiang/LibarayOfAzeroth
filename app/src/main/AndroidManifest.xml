@@ -20,6 +20,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".LodingActivity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+
         <activity android:name=".MainHistoryActivity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
 
         <activity android:name=".MainHistoryActivity1" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
@@ -34,6 +36,8 @@
         <activity android:name=".OtherHistoryActivity4" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
         <activity android:name=".OtherHistoryActivity5" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
         <activity android:name=".OtherHistoryActivity6" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+
+        <activity android:name=".WebViewActivity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
     </application>
 
 </manifest>
