@@ -6,6 +6,12 @@
     <string name="main_history2">第二部分</string>
     <string name="main_history3">第三部分</string>
     <string name="other_history">其他藏书</string>
+    <string name="other_history1">偏史</string>
+    <string name="other_history2">人物</string>
+    <string name="other_history3">日记</string>
+    <string name="other_history4">使用手册</string>
+    <string name="other_history5">信件</string>
+    <string name="other_history6">其他</string>
     <string name="title">艾泽拉斯大图书馆</string>
     <string name="by">九城珍藏版</string>
 </resources>

@@ -21,11 +21,19 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainHistoryActivity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+
         <activity android:name=".MainHistoryActivity1" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
         <activity android:name=".MainHistoryActivity2" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
         <activity android:name=".MainHistoryActivity3" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
 
-        <activity android:name=".OtherHistoryActivity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"></activity>
+        <activity android:name=".OtherHistoryActivity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+
+        <activity android:name=".OtherHistoryActivity1" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+        <activity android:name=".OtherHistoryActivity2" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+        <activity android:name=".OtherHistoryActivity3" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+        <activity android:name=".OtherHistoryActivity4" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+        <activity android:name=".OtherHistoryActivity5" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+        <activity android:name=".OtherHistoryActivity6" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
     </application>
 
 </manifest>
