@@ -2,7 +2,7 @@
     <string name="app_name">艾泽拉斯大图书馆</string>
 
     <string name="dummy_button">正史</string>
-    <string name="dummy_content">偏史</string>
+    <string name="dummy_content">其他藏书</string>
     <string name="title">艾泽拉斯大图书馆</string>
     <string name="by">九城珍藏版</string>
 </resources>
