@@ -1,8 +1,11 @@
 <resources>
     <string name="app_name">艾泽拉斯大图书馆</string>
 
-    <string name="dummy_button">正史</string>
-    <string name="dummy_content">其他藏书</string>
+    <string name="main_history">正史</string>
+    <string name="main_history1">第一部分</string>
+    <string name="main_history2">第二部分</string>
+    <string name="main_history3">第三部分</string>
+    <string name="other_history">其他藏书</string>
     <string name="title">艾泽拉斯大图书馆</string>
     <string name="by">九城珍藏版</string>
 </resources>

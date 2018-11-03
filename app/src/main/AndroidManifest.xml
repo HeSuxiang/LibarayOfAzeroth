@@ -21,6 +21,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainHistoryActivity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+        <activity android:name=".MainHistoryActivity1" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+        <activity android:name=".MainHistoryActivity2" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+        <activity android:name=".MainHistoryActivity3" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+
         <activity android:name=".OtherHistoryActivity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"></activity>
     </application>
 

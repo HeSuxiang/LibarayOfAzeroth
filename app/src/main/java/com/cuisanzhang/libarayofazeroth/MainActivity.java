@@ -25,6 +25,7 @@ public class MainActivity extends Activity {
 
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,22 +37,6 @@ public class MainActivity extends Activity {
         other_history = findViewById(R.id.other_history);
 
 
-        // Set up the user interaction to manually show or hide the system UI.
-//        mControlsView.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                toggle();
-//                Log.e("log=" , "OnClickListener");
-//            }
-//        });
-
-        // Upon interacting with UI controls, delay any scheduled hide()
-        // operations to prevent the jarring behavior of controls going away
-        // while interacting with the UI.
-//        findViewById(R.id.dummy_button).setOnTouchListener(mDelayHideTouchListener);
-
-        StartAction(main_history);
-        StartAction(other_history);
         main_history.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -69,68 +54,18 @@ public class MainActivity extends Activity {
                 startActivity(intent);
             }
         });
+
     }
 
-//    @Override
-//    protected void onPostCreate(Bundle savedInstanceState) {
-//        super.onPostCreate(savedInstanceState);
-//
-//        // Trigger the initial hide() shortly after the activity has been
-//        // created, to briefly hint to the user that UI controls
-//        // are available.
-//        delayedHide(100);
-//        Log.e("log=" , "onPostCreate");
-//    }
-//
-//    private void toggle() {
-////        if (mVisible) {
-//            hide();
-//            Log.e("log=" , "toggle hide");
-////        }
-////        else {
-////            show();
-////            Log.e("log=" , "toggle show");
-////        }
-//    }
-//
-//    private void hide() {
-//        // Hide UI first
-//        Log.e("log=" , "hide");
-//
-//        //ActionBar actionBar = getSupportActionBar();
-////        if (actionBar != null) {
-////            actionBar.hide();
-////        }
-////        mControlsView.setVisibility(View.GONE);
-////        mVisible = false;
-//
-//        // Schedule a runnable to remove the status and navigation bar after a delay
-////        mHideHandler.removeCallbacks(mShowPart2Runnable);
-//        mHideHandler.postDelayed(mHidePart2Runnable, UI_ANIMATION_DELAY);
-//    }
-//
-////    @SuppressLint("InlinedApi")
-////    private void show() {
-////        // Show the system bar
-////        mContentView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-////                | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION);
-////        mVisible = true;
-////
-////        Log.e("log=" , "show");
-////        // Schedule a runnable to display UI elements after a delay
-////        mHideHandler.removeCallbacks(mHidePart2Runnable);
-////        mHideHandler.postDelayed(mShowPart2Runnable, UI_ANIMATION_DELAY);
-////    }
-//
-//    /**
-//     * Schedules a call to hide() in [delay] milliseconds, canceling any
-//     * previously scheduled calls.
-//     */
-//    private void delayedHide(int delayMillis) {
-//        Log.e("log=" , "delayedHide");
-//        mHideHandler.removeCallbacks(mHideRunnable);
-//        mHideHandler.postDelayed(mHideRunnable, delayMillis);
-//    }
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        StartAction(main_history);
+        StartAction(other_history);
+
+    }
+
 
 
     void StartAction(View view) {
