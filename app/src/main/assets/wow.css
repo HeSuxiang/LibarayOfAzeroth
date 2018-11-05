@@ -15,9 +15,14 @@ body {
     
     background-image: url(wow_background2.png);
     padding: 30px;
+	margin:60px;
     background-repeat:no-repeat; 
 	background-size:100% 100%;
 	background-attachment:fixed;
+}
+
+div {
+	margin:60px;
 }
 
 h1 {
@@ -30,14 +35,15 @@ h1 {
     padding: 25px;
 	
     box-shadow: 5px 5px 2px #888888;
-	
-	border:1px solid #e3e197;
-	background:#ffffdd
+ 
+	border:1px solid #888888;
+	/*background:#ffffdd*/
 }
 
 
 p{
-    
+    padding-bottom: 20px;
+	
     font-size: 20pt;
     color: #453929;
     letter-spacing:5px;
