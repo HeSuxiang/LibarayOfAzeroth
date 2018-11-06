@@ -25,7 +25,7 @@ opacity: 1; /*结尾状态 透明度为1*/
 
 body {
     
-    background-image: url(wow_background2.png);
+    background-image: url(wow.png);
     padding: 30px;
 	margin:20px;
     background-repeat:no-repeat; 
@@ -36,6 +36,7 @@ body {
 
 div {
 	margin:20px;
+    padding: 30px;
 	webkit-animation: fadeIn 1s;	/* Safari 和 Chrome */
 }
 
@@ -58,13 +59,16 @@ h2 {
     color: #453929;
 	-webkit-animation: fadeIn 5s;	/* Safari 和 Chrome */
 }
+strong {
+    color: #453929;
+    -webkit-animation: fadeIn 5s;   /* Safari 和 Chrome */
+}
 
 p{
     padding-bottom: 20px;
-	
-    font-size: 20pt;
+    font-size: 18pt;
     color: #453929;
-    letter-spacing:5px;
+    letter-spacing:3px;
     line-height:40px;
 	-webkit-animation: fadeIn 5s;	/* Safari 和 Chrome */
  

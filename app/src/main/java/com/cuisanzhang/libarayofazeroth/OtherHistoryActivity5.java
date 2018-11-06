@@ -2,6 +2,7 @@ package com.cuisanzhang.libarayofazeroth;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,12 +17,19 @@ public class OtherHistoryActivity5 extends Activity {
     private ListView listView;
 
     private  String[] Historys = {
-            "01  关于迪菲亚兄弟会的报告",
-            "02  翻译好的藏尸者信件",
-            "03  熊怪酋长的话",
-            "04  被破译的信件",
-            "05  斯塔文·密斯特曼托的信",
+            "关于迪菲亚兄弟会的报告",
+            "翻译好的藏尸者信件",
+            "熊怪酋长的话",
+            "被破译的信件",
+            "斯塔文·密斯特曼托的信",
+            "特别收录 - 苏利·巴鲁的信",
 
+//            "01  关于迪菲亚兄弟会的报告",
+//            "02  翻译好的藏尸者信件",
+//            "03  熊怪酋长的话",
+//            "04  被破译的信件",
+//            "05  斯塔文·密斯特曼托的信",
+//            "特别收录 - 苏利·巴鲁的信",
     };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,7 +80,7 @@ public class OtherHistoryActivity5 extends Activity {
             }
 
             @Override
-            public View getView(int position, View convertView, ViewGroup parent) {
+            public View getView(final int position, View convertView, ViewGroup parent) {
                 // TODO Auto-generated method stub
                 final int pos = position;
 
@@ -97,7 +105,14 @@ public class OtherHistoryActivity5 extends Activity {
 
 
                 holder.textView.setText(Historys[position]);
-
+                holder.textView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(OtherHistoryActivity5.this, WebViewActivity.class);
+                        intent.putExtra(WebViewActivity.EXTRA_URI, "html/2/5/" + (position + 1) + ".html");
+                        startActivity(intent);
+                    }
+                });
 //                holder.name.setText(block.getMaterial());
 
                 return convertView;

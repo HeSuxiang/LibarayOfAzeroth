@@ -4,13 +4,19 @@
     android:id="@+id/activity_loding"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     android:padding="6dp"
-    tools:context="com.cuisanzhang.mincreafting.ActivityLoding">
+    android:background="#ede0c9"
+    tools:context="com.cuisanzhang.libarayofazeroth.MainActivity">
     <ImageView
+
         android:id="@+id/imageViewLoading"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:scaleType="centerCrop"
+        android:src="@drawable/wowgamelogo_1"
         />
 
 </LinearLayout>

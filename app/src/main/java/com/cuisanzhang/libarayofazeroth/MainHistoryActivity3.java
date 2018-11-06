@@ -2,6 +2,7 @@ package com.cuisanzhang.libarayofazeroth;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,20 +18,35 @@ public class MainHistoryActivity3 extends Activity {
     private  String[] Historys = {
 
 
-            "01  新的部落",
-            "02  蜘蛛之战",
-            "03  克尔苏加德和天灾军团的建立",
-            "04  联盟的分裂",
-            "05  洛丹伦的天灾",
-            "06  太阳之井—奎尔萨拉斯的沦陷",
-            "07  阿克蒙德的归来和卡利姆多之旅",
-            "08  背叛者的胜利",
-            "09  血精灵的崛起",
-            "10  瘟疫之地的内战",
-            "11  巫妖王的胜利",
-            "12  古老的仇恨-卡利姆多的开拓",
-            "13  诅咒之路",
-            "14  亡灵瘟疫流行病学",
+            "新的部落",
+            "蜘蛛之战",
+            "克尔苏加德和天灾军团的建立",
+            "联盟的分裂",
+            "洛丹伦的天灾",
+            "太阳之井—奎尔萨拉斯的沦陷",
+            "阿克蒙德的归来和卡利姆多之旅",
+            "背叛者的胜利",
+            "血精灵的崛起",
+            "瘟疫之地的内战",
+            "巫妖王的胜利",
+            "古老的仇恨-卡利姆多的开拓",
+            "诅咒之路",
+            "亡灵瘟疫流行病学",
+
+//            "01  新的部落",
+//            "02  蜘蛛之战",
+//            "03  克尔苏加德和天灾军团的建立",
+//            "04  联盟的分裂",
+//            "05  洛丹伦的天灾",
+//            "06  太阳之井—奎尔萨拉斯的沦陷",
+//            "07  阿克蒙德的归来和卡利姆多之旅",
+//            "08  背叛者的胜利",
+//            "09  血精灵的崛起",
+//            "10  瘟疫之地的内战",
+//            "11  巫妖王的胜利",
+//            "12  古老的仇恨-卡利姆多的开拓",
+//            "13  诅咒之路",
+//            "14  亡灵瘟疫流行病学",
     };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,7 +95,7 @@ public class MainHistoryActivity3 extends Activity {
             }
 
             @Override
-            public View getView(int position, View convertView, ViewGroup parent) {
+            public View getView(final int position, View convertView, ViewGroup parent) {
                 // TODO Auto-generated method stub
                 final int pos = position;
 
@@ -104,7 +120,14 @@ public class MainHistoryActivity3 extends Activity {
 
 
                 holder.textView.setText(Historys[position]);
-
+                holder.textView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(MainHistoryActivity3.this, WebViewActivity.class);
+                        intent.putExtra(WebViewActivity.EXTRA_URI, "html/1/3/" + (position + 1) + ".html");
+                        startActivity(intent);
+                    }
+                });
 //                holder.name.setText(block.getMaterial());
 
                 return convertView;

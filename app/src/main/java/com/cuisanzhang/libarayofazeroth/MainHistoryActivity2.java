@@ -2,6 +2,7 @@ package com.cuisanzhang.libarayofazeroth;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,21 +18,38 @@ public class MainHistoryActivity2 extends Activity {
     private  String[] Historys = {
 
 
-            "01  铁炉堡—矮人的觉醒",
-            "02  七大王国",
-            "03  艾格文与屠龙",
-            "04  三锤之战",
-            "05  最后的守护者",
-            "06  基尔加丹和影子契约",
-            "07  部落的崛起",
-            "08  黑暗之门与暴风城的陷落",
-            "09  洛丹伦联盟",
-            "10  跨越黑暗之门",
-            "11  德拉诺的入侵",
-            "12  巫妖之王的诞生",
-            "13  寒冰王冠与冰封王座",
-            "14  格瑞姆巴托之战",
-            "15  兽人的消沉",
+            "铁炉堡—矮人的觉醒",
+            "七大王国",
+            "艾格文与屠龙",
+            "三锤之战",
+            "最后的守护者",
+            "基尔加丹和影子契约",
+            "部落的崛起",
+            "黑暗之门与暴风城的陷落",
+            "洛丹伦联盟",
+            "跨越黑暗之门",
+            "德拉诺的入侵",
+            "巫妖之王的诞生",
+            "寒冰王冠与冰封王座",
+            "格瑞姆巴托之战",
+            "兽人的消沉",
+
+//
+//            "01  铁炉堡—矮人的觉醒",
+//            "02  七大王国",
+//            "03  艾格文与屠龙",
+//            "04  三锤之战",
+//            "05  最后的守护者",
+//            "06  基尔加丹和影子契约",
+//            "07  部落的崛起",
+//            "08  黑暗之门与暴风城的陷落",
+//            "09  洛丹伦联盟",
+//            "10  跨越黑暗之门",
+//            "11  德拉诺的入侵",
+//            "12  巫妖之王的诞生",
+//            "13  寒冰王冠与冰封王座",
+//            "14  格瑞姆巴托之战",
+//            "15  兽人的消沉",
 
 
     };
@@ -82,7 +100,7 @@ public class MainHistoryActivity2 extends Activity {
             }
 
             @Override
-            public View getView(int position, View convertView, ViewGroup parent) {
+            public View getView(final int position, View convertView, ViewGroup parent) {
                 // TODO Auto-generated method stub
                 final int pos = position;
 
@@ -107,7 +125,14 @@ public class MainHistoryActivity2 extends Activity {
 
 
                 holder.textView.setText(Historys[position]);
-
+                holder.textView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(MainHistoryActivity2.this, WebViewActivity.class);
+                        intent.putExtra(WebViewActivity.EXTRA_URI, "html/1/2/" + (position + 1) + ".html");
+                        startActivity(intent);
+                    }
+                });
 //                holder.name.setText(block.getMaterial());
 
                 return convertView;

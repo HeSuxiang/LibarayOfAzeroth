@@ -1,0 +1,71 @@
+/*
+ hesuxiang
+ */
+
+html {
+    font-family: "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue",sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+
+}
+
+ /*淡入淡出动画效果*/
+@-webkit-keyframes fadeIn {
+0% {
+opacity: 0; /*初始状态 透明度为0*/
+}
+50% {
+opacity: 0; /*中间状态 透明度为0*/
+}
+100% {
+opacity: 1; /*结尾状态 透明度为1*/
+}
+}
+
+body {
+    
+    background-image: url(wow.png);
+    padding: 30px;
+	margin:20px;
+    background-repeat:no-repeat; 
+	background-size:100% 100%;
+	background-attachment:fixed;
+	
+}
+
+div {
+	margin:20px;
+	webkit-animation: fadeIn 1s;	/* Safari 和 Chrome */
+}
+
+h1 {
+     /*background-color:#f08523 ;*/ 
+    color: #453929;
+   /* background-color: #464444;*/
+   
+    text-align: center;
+    margin: 20px 20px 20px 20px;
+    padding: 25px;
+	
+    box-shadow: 5px 5px 2px #888888;
+ 
+	border:1px solid #888888;
+		-webkit-animation: fadeIn 3s;	/* Safari 和 Chrome */
+	/*background:#ffffdd*/
+}
+h2 {
+    color: #453929;
+	-webkit-animation: fadeIn 5s;	/* Safari 和 Chrome */
+}
+
+p{
+    padding-bottom: 20px;
+	
+    font-size: 20pt;
+    color: #453929;
+    letter-spacing:5px;
+    line-height:40px;
+	-webkit-animation: fadeIn 5s;	/* Safari 和 Chrome */
+ 
+}

@@ -2,6 +2,7 @@ package com.cuisanzhang.libarayofazeroth;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,19 +17,30 @@ public class OtherHistoryActivity3 extends Activity {
     private ListView listView;
 
     private String[] Historys = {
-            "01  卡兹戈姆的日记",
-            //"2",
-            "02  莫里·铁钻的日记",
-            "03  格瑞林·白须的日记",
-            "04  巴尔洛戈的日记",
-            "05  染血的日记",
-            "06  泰洛尼斯的日记",
-            "07  吉尔尼的日记",
-            "08  亨里格·独眉的日记",
-            "09  斯温农场中的书",
-            "10  贝拉摩尔的研究日记",
-            "11  荆棘谷的青山",
+            "卡兹戈姆的日记",
+            "莫里·铁钻的日记",
+            "格瑞林·白须的日记",
+            "巴尔洛戈的日记",
+            "染血的日记",
+            "泰洛尼斯的日记",
+            "吉尔尼的日记",
+            "亨里格·独眉的日记",
+            "斯温农场中的书",
+            "贝拉摩尔的研究日记",
+            "荆棘谷的青山",
 
+//                 "01  卡兹戈姆的日记",
+//                //"2",
+//                "02  莫里·铁钻的日记",
+//                "03  格瑞林·白须的日记",
+//                "04  巴尔洛戈的日记",
+//                "05  染血的日记",
+//                "06  泰洛尼斯的日记",
+//                "07  吉尔尼的日记",
+//                "08  亨里格·独眉的日记",
+//                "09  斯温农场中的书",
+//                "10  贝拉摩尔的研究日记",
+//                "11  荆棘谷的青山",
 
     };
 
@@ -82,7 +94,7 @@ public class OtherHistoryActivity3 extends Activity {
         }
 
         @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
+        public View getView(final int position, View convertView, ViewGroup parent) {
             // TODO Auto-generated method stub
             final int pos = position;
 
@@ -107,7 +119,14 @@ public class OtherHistoryActivity3 extends Activity {
 
 
             holder.textView.setText(Historys[position]);
-
+            holder.textView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(OtherHistoryActivity3.this, WebViewActivity.class);
+                    intent.putExtra(WebViewActivity.EXTRA_URI, "html/2/3/" + (position + 1) + ".html");
+                    startActivity(intent);
+                }
+            });
 //                holder.name.setText(block.getMaterial());
 
             return convertView;

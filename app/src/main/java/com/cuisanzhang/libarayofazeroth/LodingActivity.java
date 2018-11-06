@@ -1,5 +1,6 @@
 package com.cuisanzhang.libarayofazeroth;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.SystemClock;
@@ -10,20 +11,20 @@ import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class LodingActivity extends AppCompatActivity {
+public class LodingActivity extends Activity {
 
-    private static final int WAIT_SECOND = 800;
+    private static final int WAIT_SECOND = 2000;
     private String TAG = "ActivityLoding";
 
 //    private SoundPool mSoundPool = null;
 
     private int startLogos[] = {
-//            R.drawable.start_logo0,
-//            R.drawable.start_logo1,
-//            R.drawable.start_logo2,
-//            R.drawable.start_logo3,
-//            R.drawable.start_logo4,
-//            R.drawable.start_logo5,
+            R.drawable.wowgamelogo_1,
+            R.drawable.wowgamelogo_2,
+            R.drawable.wowgamelogo_3,
+            R.drawable.wowgamelogo_4,
+            R.drawable.wowgamelogo_5,
+            R.drawable.wowgamelogo_6,
 //            R.drawable.start_logo6,
 ////            R.drawable.start_logo7,
 //            R.drawable.start_logo8,

@@ -2,6 +2,7 @@ package com.cuisanzhang.libarayofazeroth;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,25 +17,38 @@ public class OtherHistoryActivity1 extends Activity {
     private ListView listView;
 
     private  String[] Historys = {
-            "01  黎明之雾",
-            "02  大地母亲的悲伤",
-
-            "03  月神与白鹿",
-            "04  森林之王与最初的德鲁伊",
-            "05  半人马的仇恨",
-            "06  两个帝国",
-            "07  帝国的陷落",
-            "08  巨魔传说",
-            "09  噬灵者的愤怒",
-            "10  堕落者纲要",
-            "11  亡灵的起源",
-            "12  第二次兽人战争的结局",
-            "13  达隆郡全史",
-            "14  流沙之战",
-            "15  魔兽世界 中文官方网站 World Of Warcraft - 冬幕节",
-
+            "黎明之雾",
+            "大地母亲的悲伤",
+            "月神与白鹿",
+            "森林之王与最初的德鲁伊",
+            "半人马的仇恨",
+            "两个帝国",
+            "帝国的陷落",
+            "巨魔传说",
+            "噬灵者的愤怒",
+            "堕落者纲要",
+            "亡灵的起源",
+            "第二次兽人战争的结局",
+            "达隆郡全史",
+            "流沙之战",
+            "魔兽世界 中文官方网站 World Of Warcraft - 冬幕节",
 
 
+//            "01  黎明之雾",
+//            "02  大地母亲的悲伤",
+//            "03  月神与白鹿",
+//            "04  森林之王与最初的德鲁伊",
+//            "05  半人马的仇恨",
+//            "06  两个帝国",
+//            "07  帝国的陷落",
+//            "08  巨魔传说",
+//            "09  噬灵者的愤怒",
+//            "10  堕落者纲要",
+//            "11  亡灵的起源",
+//            "12  第二次兽人战争的结局",
+//            "13  达隆郡全史",
+//            "14  流沙之战",
+//            "15  魔兽世界 中文官方网站 World Of Warcraft - 冬幕节",
     };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,7 +99,7 @@ public class OtherHistoryActivity1 extends Activity {
             }
 
             @Override
-            public View getView(int position, View convertView, ViewGroup parent) {
+            public View getView(final int position, View convertView, ViewGroup parent) {
                 // TODO Auto-generated method stub
                 final int pos = position;
 
@@ -110,7 +124,14 @@ public class OtherHistoryActivity1 extends Activity {
 
 
                 holder.textView.setText(Historys[position]);
-
+                holder.textView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(OtherHistoryActivity1.this, WebViewActivity.class);
+                        intent.putExtra(WebViewActivity.EXTRA_URI, "html/2/1/" + (position + 1) + ".html");
+                        startActivity(intent);
+                    }
+                });
 //                holder.name.setText(block.getMaterial());
 
                 return convertView;

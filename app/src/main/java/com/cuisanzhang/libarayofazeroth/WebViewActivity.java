@@ -77,7 +77,7 @@ public class WebViewActivity extends Activity {
 
 
 
-        Log.e("HtmlUrl", HtmlUrl);
+//        Log.e("HtmlUrl", HtmlUrl);
 //        tutorial_name = intent.getStringExtra(EXTRA_TUTORIAL_NAME);
 //        boolean is_simplified = intent.getBooleanExtra(EXTRA_IS_LANGUAGE_OF_SIMPLIFIED, true);
 
