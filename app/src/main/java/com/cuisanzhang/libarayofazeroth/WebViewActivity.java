@@ -3,6 +3,7 @@ package com.cuisanzhang.libarayofazeroth;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.RequiresApi;
@@ -144,6 +145,15 @@ public class WebViewActivity extends Activity {
         stringData = builder.toString();
         Log.e("stringData", stringData);
         mWebview.getSettings().setDefaultTextEncodingName("UTF-8");//设置默认为utf-8
+
+        //设置背景图片
+        mWebview.setBackgroundResource(R.drawable.wow_background);
+
+        mWebview.setBackgroundColor(Color.argb(0, 0, 0, 0));
+
+//        mWebview.setBackgroundColor(0);
+//        mWebview.getBackground().setAlpha(0);
+
 
         mWebview.loadDataWithBaseURL("file:///android_asset/",stringData,  "text/html", "UTF-8",null);
 
