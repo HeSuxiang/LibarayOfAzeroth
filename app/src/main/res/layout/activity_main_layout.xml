@@ -23,6 +23,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
             android:layout_weight="1.5"
             android:orientation="vertical">
 
@@ -35,7 +37,7 @@
                 android:keepScreenOn="true"
                 android:text="@string/title"
                 android:textColor="@android:color/black"
-                android:textSize="40sp"
+                android:textSize="30sp"
                 android:textStyle="bold"
                 android:background="@drawable/title_bg"
                 />
@@ -59,7 +61,7 @@
                 android:keepScreenOn="true"
                 android:text="@string/main_history"
                 android:textColor="@android:color/black"
-                android:textSize="60sp"
+                android:textSize="30sp"
                  />
         </LinearLayout>
 
@@ -79,7 +81,7 @@
                 android:keepScreenOn="true"
                 android:text="@string/other_history"
                 android:textColor="@android:color/black"
-                android:textSize="60sp"
+                android:textSize="30sp"
                />
 
         </LinearLayout>
@@ -105,7 +107,7 @@
                 android:keepScreenOn="true"
                 android:text="@string/by"
                 android:textColor="@android:color/darker_gray"
-                android:textSize="20sp"
+                android:textSize="10sp"
                 android:textStyle="italic"
                 />
         </LinearLayout>

@@ -31,7 +31,7 @@ public class OtherHistoryActivity1 extends Activity {
             "第二次兽人战争的结局",
             "达隆郡全史",
             "流沙之战",
-            "魔兽世界 中文官方网站 World Of Warcraft - 冬幕节",
+            "魔兽世界 - 冬幕节",
 
 
 //            "01  黎明之雾",

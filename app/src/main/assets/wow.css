@@ -24,19 +24,19 @@ opacity: 1; /*结尾状态 透明度为1*/
 }
 
 body {
-    
+    padding: 20px;
     /*background-image: url(wow.png);*/
-    padding: 30px;
-	margin:20px;
-    background-repeat:no-repeat; 
-	background-size:100% 100%;
-	background-attachment:fixed;
-	background-positon: 100%, 100%;
+    /*padding: 30px;*/
+	/*margin:20px;*/
+    /*background-repeat:no-repeat; */
+	/*background-size:100% 100%;*/
+	/*background-attachment:fixed;*/
+	/*background-positon: 100%, 100%;*/
 }
 
 div {
-	margin:20px;
-    padding: 30px;
+	margin:2px;
+    padding-top: 10px;
 	webkit-animation: fadeIn 1s;	/* Safari 和 Chrome */
 }
 
@@ -44,32 +44,39 @@ h1 {
      /*background-color:#f08523 ;*/ 
     color: #453929;
    /* background-color: #464444;*/
-   
+   margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     text-align: center;
-    margin: 20px 20px 20px 20px;
-    padding: 25px;
+    font-size: 16pt;
+
+    /*margin: 30;*/
 	
     box-shadow: 5px 5px 2px #888888;
  
 	border:1px solid #888888;
-		-webkit-animation: fadeIn 3s;	/* Safari 和 Chrome */
+	-webkit-animation: fadeIn 3s;	/* Safari 和 Chrome */
 	/*background:#ffffdd*/
 }
 h2 {
     color: #453929;
+    font-size: 14pt;
 	-webkit-animation: fadeIn 5s;	/* Safari 和 Chrome */
 }
 strong {
     color: #453929;
+    font-size: 14pt;
     -webkit-animation: fadeIn 5s;   /* Safari 和 Chrome */
 }
 
 p{
-    padding-bottom: 20px;
-    font-size: 18pt;
+    padding-right: 8px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    font-size: 12pt;
     color: #453929;
     letter-spacing:2px;
-    line-height:40px;
+    line-height:20px;
 	-webkit-animation: fadeIn 5s;	/* Safari 和 Chrome */
  
 }
