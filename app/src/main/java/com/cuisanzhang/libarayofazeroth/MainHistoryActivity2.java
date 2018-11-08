@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,9 +13,16 @@ import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import tyrantgit.explosionfield.ExplosionField;
+
 public class MainHistoryActivity2 extends Activity {
 
     private ListView listView;
+
+
+    private ExplosionField explosionField;
+    private Handler mHandler = new Handler();
+
     private  String[] Historys = {
 
 
@@ -128,9 +136,21 @@ public class MainHistoryActivity2 extends Activity {
                 holder.textView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent(MainHistoryActivity2.this, WebViewActivity.class);
-                        intent.putExtra(WebViewActivity.EXTRA_URI, "html/1/2/" + (position + 1) + ".html");
-                        startActivity(intent);
+                        explosionField.explode(v);
+
+                        //延时执行
+                        mHandler.postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                //跳转到MainActivity
+                                Intent intent = new Intent(MainHistoryActivity2.this, WebViewActivity.class);
+                                intent.putExtra(WebViewActivity.EXTRA_URI, "html/1/2/" + (position + 1) + ".html");
+                                startActivity(intent);
+
+
+                            }
+                        }, 1000);// n微妙后跳转
+
                     }
                 });
 //                holder.name.setText(block.getMaterial());

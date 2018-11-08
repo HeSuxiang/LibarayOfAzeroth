@@ -1,21 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ede0c9"
-
+    android:orientation="vertical"
+    android:gravity="center"
     tools:context="com.cuisanzhang.libarayofazeroth.MainHistoryActivity">
 
+    <!--<LinearLayout-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:gravity="center"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:orientation="vertical"-->
+        >
+
+   <!--<Button-->
+       <!--android:layout_width="wrap_content"-->
+       <!--android:layout_height="wrap_content"-->
+       <!--android:gravity="center"-->
+       <!--android:text="ndroid:"/>-->
 
     <ListView
         android:id="@+id/listView"
         android:paddingTop="15dp"
         android:paddingBottom="15dp"
+
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
 
         >
     </ListView>
-</android.support.constraint.ConstraintLayout>
+    <!--</LinearLayout>-->
+
+</LinearLayout>

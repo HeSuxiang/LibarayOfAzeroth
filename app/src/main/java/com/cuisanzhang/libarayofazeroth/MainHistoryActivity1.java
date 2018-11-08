@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,9 +16,14 @@ import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import tyrantgit.explosionfield.ExplosionField;
+
 public class MainHistoryActivity1 extends Activity {
 
     private ListView listView;
+    private ExplosionField explosionField;
+    private Handler mHandler = new Handler();
+//    private Intent mIntent;
 
     private  String[] Historys = {
             "泰坦神话",
@@ -68,6 +74,7 @@ public class MainHistoryActivity1 extends Activity {
         //去掉分割线
         listView.setDividerHeight(0);
 
+        explosionField = ExplosionField.attach2Window(this);
 
     }
 
@@ -131,9 +138,27 @@ public class MainHistoryActivity1 extends Activity {
                 holder.textView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent(MainHistoryActivity1.this, WebViewActivity.class);
-                        intent.putExtra(WebViewActivity.EXTRA_URI, "html/1/1/" + (position + 1) + ".html");
-                        startActivity(intent);
+
+                        explosionField.explode(v);
+
+                        //延时执行
+                        mHandler.postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                //跳转到MainActivity
+                                Intent intent = new Intent(MainHistoryActivity1.this, WebViewActivity.class);
+                                intent.putExtra(WebViewActivity.EXTRA_URI, "html/1/1/" + (position + 1) + ".html");
+                                startActivity(intent);
+
+
+                            }
+                        }, 1000);// n微妙后跳转
+//---------------------
+//                    作者：jorkyin
+//                    来源：CSDN
+//                    原文：https://blog.csdn.net/jorkyin/article/details/50811526
+//                    版权声明：本文为博主原创文章，转载请附上博文链接！
+
                     }
                 });
 
@@ -147,6 +172,8 @@ public class MainHistoryActivity1 extends Activity {
     @Override
     protected void onResume() {
         super.onResume();
+
+//        reset(listView);
 
         startAlphaAnimation(listView);
     }
@@ -172,5 +199,18 @@ public class MainHistoryActivity1 extends Activity {
 //        原文：https://blog.csdn.net/shibin1990_/article/details/51602498
 //        版权声明：本文为博主原创文章，转载请附上博文链接！
 
+
+//    private void reset(View root) {
+//        if (root instanceof ViewGroup) {
+//            ViewGroup parent = (ViewGroup) root;
+//            for (int i = 0; i < parent.getChildCount(); i++) {
+//                reset(parent.getChildAt(i));
+//            }
+//        } else {
+//            root.setScaleX(1);
+//            root.setScaleY(1);
+//            root.setAlpha(1);
+//        }
+//    }
 
 }
