@@ -46,7 +46,7 @@ public class OtherHistoryActivity4 extends Activity {
 
         //去掉分割线
         listView.setDividerHeight(0);
-
+        explosionField = ExplosionField.attach2Window(this);
 
     }
 
@@ -124,7 +124,7 @@ public class OtherHistoryActivity4 extends Activity {
 
 
                         }
-                    }, 1000);// n微妙后跳转
+                    }, 800);// n微妙后跳转
 
                 }
             });

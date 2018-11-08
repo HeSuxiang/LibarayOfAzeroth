@@ -110,7 +110,7 @@ public class MainHistoryActivity extends Activity implements View.OnClickListene
                     //跳转到MainActivity
                     startActivity(intent);
                 }
-            }, 1000);// n微妙后跳转
+            }, 800);// n微妙后跳转
         }
 
     }

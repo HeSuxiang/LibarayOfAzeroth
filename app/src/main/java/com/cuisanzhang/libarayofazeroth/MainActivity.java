@@ -15,6 +15,9 @@ import android.view.animation.ScaleAnimation;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+//import com.fadai.particlesmasher.ParticleSmasher;
+//import com.fadai.particlesmasher.SmashAnimator;
+
 import tyrantgit.explosionfield.ExplosionField;
 
 /**
@@ -29,10 +32,11 @@ public class MainActivity extends Activity implements View.OnClickListener {
     private ExplosionField explosionField;
     private Handler mHandler = new Handler();
     private Intent intent = null;
-
+//    private ParticleSmasher smasher;
 
     private LinearLayout title;
     private LinearLayout logo;
+    int i = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +46,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
 
         explosionField = ExplosionField.attach2Window(MainActivity.this);
+//        smasher = new ParticleSmasher(MainActivity.this);
 
         title = findViewById(R.id.title);
         logo = findViewById(R.id.logo);
@@ -85,7 +90,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     }
 
     @Override
-    public void onClick(View v) {
+    public void onClick(final View v) {
         intent = null;
 
         switch (v.getId()){
@@ -111,6 +116,33 @@ public class MainActivity extends Activity implements View.OnClickListener {
         }
 
         explosionField.explode(v);
+
+
+
+//        SmashAnimator.OnAnimatorListener onAnimatorListener = new SmashAnimator.OnAnimatorListener() {
+//            @Override
+//            public void onAnimatorStart() {
+//                super.onAnimatorStart();
+//                // 回调，动画开始
+//            }
+//
+//            @Override
+//            public void onAnimatorEnd() {
+//                super.onAnimatorEnd();
+//                // 回调，动画结束
+//                smasher.reShowView(v);
+//            }
+//        };
+
+//        smasher.with(v)
+//                .setStyle(SmashAnimator.STYLE_DROP)    // 设置动画样式
+//                .setDuration(3000)                     // 设置动画时间
+//                .setStartDelay(300)                    // 设置动画前延时
+//                .setHorizontalMultiple(3)              // 设置横向运动幅度，默认为3
+//                .setVerticalMultiple(4)                // 设置竖向运动幅度，默认为4
+//                .addAnimatorListener(onAnimatorListener)
+//                .start();
+//        i++;
         if(intent != null) {
             mHandler.postDelayed(new Runnable() {
                 @Override
@@ -118,8 +150,10 @@ public class MainActivity extends Activity implements View.OnClickListener {
                     //跳转到MainActivity
                     startActivity(intent);
                 }
-            }, 1000);// n微妙后跳转
+            }, 800);// n微妙后跳转
 //            v.setVisibility(View.INVISIBLE);
+
+
         }
     }
 //---------------------

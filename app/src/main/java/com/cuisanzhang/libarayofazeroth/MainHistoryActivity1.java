@@ -152,7 +152,7 @@ public class MainHistoryActivity1 extends Activity {
 
 
                             }
-                        }, 1000);// n微妙后跳转
+                        }, 800);// n微妙后跳转
 //---------------------
 //                    作者：jorkyin
 //                    来源：CSDN
